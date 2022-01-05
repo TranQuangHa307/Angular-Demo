@@ -39,18 +39,18 @@
     <div *ngIf="currentTutorial">
       <h4>Tutorial</h4>
       <div>
-        <label><strong>Title:</strong></label> {{ currentTutorial.title }}
+        <label><strong>Title:</strong></label> {{ currentTutorial.title ?? '' }}
       </div>
       <div>
         <label><strong>Description:</strong></label>
-        {{ currentTutorial.description }}
+        {{ currentTutorial.description ?? '' }}
       </div>
       <div>
         <label><strong>Status:</strong></label>
         {{ currentTutorial.published ? "Published" : "Pending" }}
       </div>
 
-      <a class="badge badge-warning" routerLink="/tutorials/{{ currentTutorial.id }}">
+      <a class="badge badge-warning" routerLink="/tutorials/{{ currentTutorial.id ?? '' }}">
         Edit
       </a>
     </div>

@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class TutorialDetailsComponent implements OnInit {
 
-  currentTutorial = null;
+  currentTutorial: any = null;
   message = '';
 
   constructor(
